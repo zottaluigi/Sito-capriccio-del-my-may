@@ -103,7 +103,6 @@ header {
   font-weight: 400;
   color: #1a1817;
   text-align: left;
-  letter-spacing: 0.02em;
   background: transparent;
   border: none;
   text-decoration: none;
@@ -113,14 +112,16 @@ header {
   margin-left: 0;
   margin-right: 24px;
   line-height: 1.1;
-  transition: filter 0.13s;
 }
-.logo-titolo:active, .logo-titolo:focus, .logo-titolo:hover {
-  text-decoration: none;
-  color: #1a1817;
-  filter: brightness(0.96);
-  outline: none;
+
+@media (max-width: 600px) {
+  .logo-titolo {
+    font-size: 1.23rem;
+    padding: 11px 9px 11px 8px;
+    margin-right: 10px;
+  }
 }
+
 
 /* Per la navbar con elementi a destra */
 .navbar {
