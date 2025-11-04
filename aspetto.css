@@ -38,6 +38,21 @@ header {
   box-shadow: 0 3px 14px rgba(60, 40, 20, 0.03);
 }
 
+/* Aggiungi padding-top a body per non sovrapporre contenuti all'header fisso */
+body {
+  padding-top: 76px; /* metti qui l'altezza corretta del tuo header (es: 76px) */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--accent, #c7a17a);
+  box-shadow: 0 3px 14px rgba(60, 40, 20, 0.03);
+}
+
 /* Spazio dallo scorrimento dei contenuti sotto l'header fisso */
 body {
   padding-top: 68px; /* adatta questa misura all'altezza effettiva del tuo header/nav */
