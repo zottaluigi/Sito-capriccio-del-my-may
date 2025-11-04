@@ -26,6 +26,23 @@ html, body {
   color: var(--primary);
   min-height: 100vh;
 }
+
+/* Per tenere header fisso in alto */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--accent, #c7a17a);
+  box-shadow: 0 3px 14px rgba(60, 40, 20, 0.03);
+}
+
+/* Spazio dallo scorrimento dei contenuti sotto l'header fisso */
+body {
+  padding-top: 68px; /* adatta questa misura all'altezza effettiva del tuo header/nav */
+}
+
 header {
   background: var(--accent);
   color: var(--light);
