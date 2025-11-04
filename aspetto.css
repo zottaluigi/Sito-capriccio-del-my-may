@@ -7,6 +7,7 @@
   --shadow: rgba(60, 40, 20, 0.05) 0 3px 8px;
 }
 
+/* Layout base */
 html, body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -16,37 +17,38 @@ html, body {
   min-height: 100vh;
 }
 
-/* Header sempre fisso */
+/* Header fisso sempre in alto */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  background: var(--accent, #c7a17a);
-  color: var(--light, #fff);
+  background: var(--accent);
+  color: var(--light);
   box-shadow: 0 3px 14px rgba(60, 40, 20, 0.03);
   padding: 0;
 }
 
+/* Spazio sotto header fisso */
 body {
-  /* Adatta a seconda dell’altezza effettiva dell’header */
-  padding-top: 68px;
+  padding-top: 68px; /* adatta se il tuo header è più alto */
 }
 
-/* Navbar sempre tutta a sinistra */
+/* Navbar e logo a sinistra */
 .navbar {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding-left: 0;
 }
 
-/* Titolo stile elegante a sinistra */
+/* Titolo stile immagine, elegante e piccolo, sempre a sinistra */
 .logo-titolo {
-  display: inline-block;
   font-family: 'Dancing Script', 'Brush Script MT', cursive, serif;
   font-size: 2rem;
   font-weight: 400;
@@ -54,25 +56,24 @@ body {
   text-align: left;
   background: transparent;
   border: none;
-  text-decoration: none;
   user-select: none;
   cursor: pointer;
-  padding: 10px 16px 10px 10px;
-  margin-left: 0;
+  padding: 8px 14px 8px 8px;
   margin-right: 18px;
+  text-decoration: none;
   line-height: 1.1;
 }
 .logo-titolo:active, .logo-titolo:focus, .logo-titolo:hover {
   color: #1a1817;
-  filter: brightness(0.96);
   outline: none;
   text-decoration: none;
+  filter: brightness(0.97);
 }
 
 @media (max-width: 600px) {
   .logo-titolo {
     font-size: 1.13rem;
-    padding: 8px 6px 8px 7px;
+    padding: 8px 7px 8px 4px;
     margin-right: 8px;
   }
 }
@@ -80,22 +81,18 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  flex-direction: row;
+  gap: 1rem;
   margin: 0;
   padding: 0;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
 }
-
-.nav-links li {
-  text-align: left;
-}
-
-/* Stile link navbar */
+.nav-links li { text-align: left; }
 .nav-links li a {
   color: var(--light);
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 8px 13px;
   border-radius: 5px;
   font-weight: 500;
   transition: background 0.15s;
@@ -104,39 +101,54 @@ body {
   background: var(--primary);
 }
 
-/* Mobile-navbar hamburger e nav verticale */
+/* Bottoncino hamburger solo su mobile */
 .menu-toggle {
   background: none;
   border: none;
   color: var(--light);
   font-size: 2rem;
-  display: none;
   cursor: pointer;
-  padding: 12px;
-  margin-left: 0;
+  display: none;
+  padding: 8px;
+}
+
+/* Mobile: nav verticale, sempre a sinistra */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100vw;
+    max-width: none;
+  }
+  .logo-titolo {
+    font-size: 1.15rem;
+    padding: 8px 7px 8px 7px;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    margin-left: 0;
   }
   .nav-links {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background: var(--accent, #c7a17a);
     position: absolute;
-    top: 64px;
     left: 0;
-    width: 66vw;
-    min-width: 150px;
-    max-width: 250px;
+    top: 64px;
+    width: 180px;
+    min-width: 130px;
+    max-width: 230px;
+    background: var(--accent);
     border-radius: 0 0 16px 0;
-    box-shadow: 0 15px 28px -10px #200d0522;
+    box-shadow: 0 10px 24px -10px #200d0540;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s;
     padding-left: 0.7rem;
+    transition: max-height 0.33s;
     z-index: 10;
   }
   .nav-links.active {
@@ -153,7 +165,7 @@ body {
   }
 }
 
-/* Stile fade-in voci menu */
+/* Fade-in animazione menu voci */
 .menu-item {
   opacity: 0;
   transform: translateY(20px);
@@ -164,6 +176,8 @@ body {
   transform: translateY(0);
 }
 
+
+/* --- CONTENUTO MENU E CARD --- */
 main {
   padding: 32px 1rem 0 1rem;
   max-width: 1100px;
@@ -225,7 +239,7 @@ main {
   font-size: 1.07rem;
 }
 
-/* Css per footer */
+/* --- FOOTER MODERNO --- */
 footer {
   width: 100%;
   background: var(--primary, #2c1810);
@@ -235,7 +249,6 @@ footer {
   font-size: 1rem;
   letter-spacing: 0.02em;
 }
-
 .footer-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -245,7 +258,6 @@ footer {
   align-items: flex-start;
   gap: 0;
 }
-
 .footer-section {
   flex: 1 1 0;
   min-width: 220px;
@@ -258,7 +270,6 @@ footer {
   align-items: center;
   text-align: center;
 }
-
 .footer-section h3 {
   font-size: 1.1rem;
   margin-bottom: 13px;
@@ -266,7 +277,6 @@ footer {
   letter-spacing: 0.05em;
   font-weight: bold;
 }
-
 .footer-section p,
 .footer-section a {
   color: var(--light, #fff);
@@ -274,20 +284,17 @@ footer {
   margin: 7px 0;
   font-weight: 400;
 }
-
 .footer-section em {
   color: #ffdba7;
   font-style: normal;
   font-size: 0.97rem;
 }
-
 .social-links {
   margin: 10px 0;
   display: flex;
   gap: 16px;
   justify-content: center;
 }
-
 .social-links a {
   display: inline-block;
   background: var(--accent, #c7a17a);
@@ -302,14 +309,12 @@ footer {
   text-decoration: none;
   transition: background 0.24s, color 0.24s;
 }
-
 .social-links a:hover {
   background: var(--light, #fff);
   color: var(--accent, #c7a17a);
   box-shadow: 0 0 16px #c7a17a44;
 }
-
-/* Mobile optimization footer */
+/* Footer responsive su mobile */
 @media (max-width: 900px) {
   .footer-content {
     flex-direction: column;
@@ -330,7 +335,7 @@ footer {
   }
 }
 
-/* Cookie banner */
+/* --- COOKIE BANNER --- */
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -367,4 +372,3 @@ footer {
 .cookie-banner button:hover {
   background: #543a27;
 }
-
