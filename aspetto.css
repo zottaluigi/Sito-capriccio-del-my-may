@@ -29,22 +29,25 @@ header {
 body {
   padding-top: 62px;
 }
-navbar {
+
+/* NAVBAR: aggiunto padding ai lati sinistro e destro per distanziare titolo e menu */
+.navbar {
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 80px;   /* AGGIUNGI o modifica questo valore per spostare titolo dal bordo sinistro */
-  padding-right: 80px;  /* AGGIUNGI questo per spostare il menu dal bordo destro */
+  padding-left: 48px;  /* MODIFICA: più spazio dal bordo sinistro */
+  padding-right: 48px; /* MODIFICA: più spazio dal bordo destro */
 }
+
 .logo-titolo {
   font-family: 'Dancing Script', 'Brush Script MT', cursive, serif;
   font-size: 1.6rem;
   color: #1a1817;
   background: transparent;
   border: none;
-  padding: 8px 10px 8px 50px;
-  margin-left: 80px;
+  padding: 8px 0 8px 0; /* MODIFICA: padding interno azzerato per posizione precisa */
+  margin-left: 0;
   margin-right: 0;
   user-select: none;
   cursor: pointer;
@@ -52,8 +55,6 @@ navbar {
   font-weight: 400;
   line-height: 1.1;
   flex-shrink: 0;
-  margin-left: 0;       /* togli margin-left se lo hai */
-  padding-left: 0;      /* togli/potta padding-left: puoi lasciarla 0 */
 }
 .logo-titolo:active, .logo-titolo:focus, .logo-titolo:hover {
   color: #1a1817;
@@ -61,13 +62,15 @@ navbar {
   text-decoration: none;
   filter: brightness(0.97);
 }
+
 .navbar-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex: 1 1 auto;
-  padding-right: 0;          /* spazio bordo destro */
+  /* padding-right: 0;  RIMOSSO, ora il padding si gestisce su .navbar */
 }
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -77,7 +80,7 @@ navbar {
   gap: 0.8rem;
   margin: 0;
   padding: 0;
-  padding-right: 0;          /* spazio interno menu bordo destro */
+  /* padding-right: 0;  RIMOSSO */
 }
 .nav-links li {
   text-align: right;
@@ -101,7 +104,7 @@ navbar {
   font-size: 2rem;
   cursor: pointer;
   display: none;
-  margin-right: 50;
+  /* margin-right: 50;  NON SERVE più col padding su .navbar */
 }
 
 /* MOBILE: hamburger e menu verticale sempre a destra */
@@ -111,12 +114,13 @@ navbar {
     justify-content: space-between;
     width: 100vw;
     max-width: none;
-    padding: 0;
+    padding-left: 16px; /* MODIFICA: meno spazio su small screen */
+    padding-right: 16px; /* MODIFICA */
   }
   .logo-titolo {
     font-size: 1.13rem;
     margin-right: 0;
-    padding-left: 8px;
+    padding-left: 0;
     padding-right: 0;
   }
 }
