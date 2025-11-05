@@ -36,8 +36,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 48px;  /* MODIFICA: più spazio dal bordo sinistro */
-  padding-right: 48px; /* MODIFICA: più spazio dal bordo destro */
+  padding-left: 480px;  /* MODIFICA: più spazio dal bordo sinistro */
+  padding-right: 480px; /* MODIFICA: più spazio dal bordo destro */
 }
 
 .logo-titolo {
