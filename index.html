@@ -6,6 +6,8 @@
   <title>Il Capriccio del My Way - Menù</title>
   <link rel="stylesheet" href="aspetto.css" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="prenotazione.css" />
+
 </head>
 <body>
 
@@ -238,6 +240,44 @@
                                     <div class="item-prices">€2,00</div></div></div>
       </div>
     </section>
+
+<!-- === PRENOTAZIONE === -->
+<section id="prenotazione" class="prenota-section">
+  <h2>Prenota il tuo tavolo</h2>
+  <form action="mailto:tuaemail@esempio.it" method="POST" enctype="text/plain">
+    <label for="nome">Nome e Cognome</label>
+    <input type="text" id="nome" name="Nome" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="Email" required>
+
+    <label for="telefono">Telefono</label>
+    <input type="tel" id="telefono" name="Telefono" required pattern="^[0-9+ ]{7,}$">
+
+    <label for="data">Data prenotazione</label>
+    <input type="date" id="data" name="Data" required>
+
+    <label for="ora">Ora</label>
+    <input type="time" id="ora" name="Ora" required>
+
+    <label for="persone">Numero di persone</label>
+    <select id="persone" name="Persone" required>
+      <option value="">Seleziona</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5+">5 o più</option>
+    </select>
+
+    <label for="note">Note speciali / Richieste</label>
+    <textarea id="note" name="Note" rows="2"></textarea>
+
+    <button type="submit">Invia Prenotazione</button>
+  </form>
+</section>
+
+    
   </main>
 
   <!-- ============================================
