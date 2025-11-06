@@ -1,0 +1,49 @@
+.prenota-section {
+  max-width: 410px;
+  margin: 40px auto;
+  background: #fffbe6;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 30px 28px;
+}
+.prenota-section h2 {
+  color: #b34b1e;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.prenota-section label {
+  display: block;
+  margin-bottom: 7px;
+  color: #594129;
+  font-weight: 500;
+}
+.prenota-section input,
+.prenota-section select,
+.prenota-section textarea {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #e0dcc2;
+  border-radius: 7px;
+  font-size: 15px;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.prenota-section button {
+  background: #b34b1e;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.prenota-section button:hover {
+  background: #a53d10;
+}
