@@ -17,7 +17,11 @@
       <a href="#" id="pageTop" class="logo-titolo">Il Capriccio del My Way</a>
       <!-- Blocco menu destra -->
       <div class="navbar-right">
-        <button class="menu-toggle" id="menuToggle" aria-label="Apri Menu">☰</button>
+       <button class="menu-toggle" id="menuToggle" aria-label="Apri Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+      </button>
         <ul class="nav-links" id="navLinks">
           <li><a href="#pizze">Pizze</a></li>
           <li><a href="#pizze-speciali">Pizze Speciali</a></li>
@@ -449,9 +453,31 @@ document.querySelector('.logo-titolo').addEventListener('click', function(e) {
 
     
     // Mobile nav toggle
-    document.getElementById('menuToggle').onclick = function() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
+   // Mobile nav toggle con animazione hamburger
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.onclick = function() {
+  // Toggle classe active su hamburger
+  menuToggle.classList.toggle('active');
+  
+  // Toggle menu
+  navLinks.classList.toggle('active');
+  
+  // Accessibilità: aggiorna aria-expanded
+  const isExpanded = navLinks.classList.contains('active');
+  menuToggle.setAttribute('aria-expanded', isExpanded);
+}
+
+// Chiudi menu quando si clicca su un link (migliora UX)
+const menuItems = navLinks.querySelectorAll('a');
+menuItems.forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    navLinks.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  });
+});
 
     // Animazione fade-in
     function fadeInOnScroll() {
