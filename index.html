@@ -248,92 +248,18 @@
 
     
 <!-- === PRENOTAZIONE === -->
-<!-- Form Prenotazioni Pizzeria -->
-<div class="booking-form-container">
-  <section id="prenotazione" class="menu-section">
-    <h2 class="booking-title">🍕 Prenota il tuo tavolo</h2>
-    <p class="booking-subtitle">Compila il modulo per prenotare nella nostra pizzeria</p>
 
-    <div class="booking-success-message" id="successMessage">
-        <h3>✓ Prenotazione Inviata!</h3>
-        <p>Grazie per la tua prenotazione.</p>
-    </div>
-
-    <div class="booking-error-message" id="errorMessage">
-        Si è verificato un errore. Riprova più tardi.
-    </div>
-
-    <form action="https://api.web3forms.com/submit" method="POST" id="bookingForm" class="booking-form">
-        
-        <!-- INSERISCI QUI LA TUA ACCESS KEY -->
-        <input type="hidden" name="access_key" value="994da2ad-6a2d-4162-93a0-45d51b01b271">
-        
-        <!-- Configurazioni opzionali -->
-        <input type="hidden" name="subject" value="Nuova Prenotazione Pizzeria">
-        <input type="hidden" name="from_name" value="Form Prenotazioni">
-        
-        <div class="booking-form-group">
-            <label for="nome">Nome Completo <span class="booking-required">*</span></label>
-            <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required>
-        </div>
-
-        <div class="booking-form-group">
-            <label for="email">Email <span class="booking-required">*</span></label>
-            <input type="email" id="email" name="email" placeholder="mario.rossi@example.com" required>
-        </div>
-
-        <div class="booking-form-group">
-            <label for="telefono">Telefono <span class="booking-required">*</span></label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+39 123 456 7890" required>
-        </div>
-
-        <div class="booking-form-row">
-            <div class="booking-form-group">
-                <label for="data">Data <span class="booking-required">*</span></label>
-                <input type="date" id="data" name="data" required>
-            </div>
-
-            <div class="booking-form-group">
-                <label for="ora">Ora <span class="booking-required">*</span></label>
-                <input type="time" id="ora" name="ora" required>
-            </div>
-        </div>
-
-        <div class="booking-form-group">
-            <label for="persone">Numero di Persone <span class="booking-required">*</span></label>
-            <select id="persone" name="persone" required>
-                <option value="">Seleziona...</option>
-                <option value="1">1 persona</option>
-                <option value="2">2 persone</option>
-                <option value="3">3 persone</option>
-                <option value="4">4 persone</option>
-                <option value="5">5 persone</option>
-                <option value="6">6 persone</option>
-                <option value="7">7 persone</option>
-                <option value="8">8 persone</option>
-                <option value="9+">9 o più persone</option>
-            </select>
-        </div>
-
-        <div class="booking-form-group">
-            <label for="note">Note aggiuntive (opzionale)</label>
-            <textarea id="note" name="note" placeholder="Allergie, richieste speciali, preferenze sul tavolo..."></textarea>
-        </div>
-
-        <button type="submit" id="submitBtn" class="booking-submit-btn">Invia Prenotazione</button>
-    </form>
-</div>
 
 
 <!-- === CONTATTACI === -->
 <section id="contattaci" class="menu-section">
-  <h2 text-align: center>OPPURE CONTATTACI A</h2>
+  <h2 text-align: center> CONTATTACI A </h2>
   <div class="contatto-centrale">
     <div class="contatto-box">
       <div class="telefono-icon">📞</div>
       <h3>Chiamaci subito</h3>
-      <a href="tel:+393274760894" class="numero-telefono">327 476 0894</a>
-      <p>Disponibili per prenotazioni</p>
+      <a href="tel:+39 0971 197 0253" class="numero-telefono">0971 197 0253</a>
+      <p>Ordina la tua pizza</p>
     </div>
   </div>
 </section>
