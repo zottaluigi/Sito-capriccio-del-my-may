@@ -27,7 +27,7 @@ header {
   box-shadow: 0 3px 14px rgba(60, 40, 20, 0.03);
 }
 body {
-  padding-top: 62px;
+  padding-top: 80px;;
 }
 
 /* NAVBAR: aggiunto padding ai lati sinistro e destro per distanziare titolo e menu */
@@ -36,6 +36,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 100px;
   padding-left: 100px;  /* MODIFICA: più spazio dal bordo sinistro */
   padding-right: 100px; /* MODIFICA: più spazio dal bordo destro */
 }
@@ -46,7 +47,7 @@ body {
   color: #1a1817;
   background: transparent;
   border: none;
-  padding: 8px 0 8px 0; /* MODIFICA: padding interno azzerato per posizione precisa */
+  padding: 12px 0; /* MODIFICA: padding interno azzerato per posizione precisa */
   margin-left: 0;
   margin-right: 0;
   user-select: none;
@@ -89,7 +90,7 @@ body {
   color: var(--light, #fff);
   background: none;
   text-decoration: none;
-  padding: 9px 12px 9px 4px;
+   padding: 12px 12px 12px 4px;
   border-radius: 5px;
   font-weight: 500;
   transition: background 0.13s;
@@ -114,14 +115,12 @@ body {
     justify-content: space-between;
     width: 100vw;
     max-width: none;
-    padding-left: 16px; /* MODIFICA: meno spazio su small screen */
-    padding-right: 16px; /* MODIFICA */
+    padding: 12px 16px;
   }
   .logo-titolo {
     font-size: 1.13rem;
     margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 8px 0;
   }
 }
 @media (max-width: 768px) {
@@ -133,7 +132,7 @@ body {
     justify-content: flex-end;
     position: absolute;
     right: 0;
-    top: 48px;
+    top: 60px;
     width: 165px;
     min-width: 120px;
     max-width: 210px;
