@@ -339,30 +339,47 @@ footer {
   font-size: 0.97rem;
 }
 .social-links {
-  margin: 10px 0;
   display: flex;
-  gap: 16px;
-  justify-content: center;
+  gap: 14px;
+  justify-content: center; /* centra le icone se vuoi */
+  margin-top: 18px;
 }
+
 .social-links a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--accent, #c7a17a);
   color: var(--primary, #2c1810);
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  text-align: center;
-  line-height: 32px;
-  font-size: 1.13rem;
-  font-weight: bold;
+  box-shadow: 0 2px 8px #c7a17a33;
+  font-size: 1.35rem; /* più grande per le icone */
+  transition: 
+    background 0.24s, 
+    color 0.24s,
+    transform 0.2s,
+    box-shadow 0.24s;
   text-decoration: none;
-  transition: background 0.24s, color 0.24s;
+  border: none;
+  outline: none;
+  position: relative;
 }
-.social-links a:hover {
-  background: var(--light, #fff);
+
+.social-links a:hover,
+.social-links a:focus {
+  background: var(--primary, #2c1810);
   color: var(--accent, #c7a17a);
-  box-shadow: 0 0 16px #c7a17a44;
+  box-shadow: 0 0 16px #c7a17a88, 0 2px 16px #2c181055;
+  transform: scale(1.17);
 }
+
+.social-links i, .social-links svg {
+  font-size: 1.6em; /* specifico per icona */
+  pointer-events: none; /* evita click su svg/icon */
+}
+
 @media (max-width: 600px) {
   .menu-item {
     flex-direction: column;
