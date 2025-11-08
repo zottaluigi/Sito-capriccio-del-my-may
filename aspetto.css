@@ -362,17 +362,6 @@ footer {
   .hero-btn {font-size: 1rem; padding: 8px 11px;}
 }
 
-/* Mostra solo la foto desktop di default */
-.desktop-img {display: block;}
-.mobile-img {display: none;}
-
-/* Sotto i 600px mostra solo la foto mobile */
-@media (max-width: 600px) {
-  .desktop-img {display: none;}
-  .mobile-img {display: block;}
-}
-
-/* css per indirizzo sotto foto */
 .hero-address {
   color: #614a2b;
   font-size: 1.10rem;
@@ -388,5 +377,4 @@ footer {
     margin-bottom: 4px;
   }
 }
-
 
