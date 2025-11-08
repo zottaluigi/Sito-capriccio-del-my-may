@@ -302,3 +302,74 @@ footer {
 }
 
 
+/* ================== HERO SEZIONE FOTO + BOTTONI ================== */
+.hero-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto 20px auto;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 14px 22px 14px;
+  gap: 18px;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 376px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(60,40,20,0.07);
+  object-fit: cover;
+}
+
+.hero-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  justify-content: center;
+  margin-top: 11px;
+}
+
+.hero-btn {
+  background: var(--accent);
+  color: var(--light);
+  font-weight: 600;
+  font-size: 1.09rem;
+  padding: 11px 23px;
+  border-radius: 7px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px #c7a17a33;
+  transition: background 0.21s, color 0.2s, transform 0.17s;
+  outline: none;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background: var(--primary);
+  color: var(--accent);
+  transform: scale(1.07);
+}
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 12px 5px 10px 5px;
+    gap: 11px;
+  }
+  .hero-img {max-width: 97vw;}
+  .hero-btn {font-size: 1rem; padding: 8px 11px;}
+}
+
+/* Mostra solo la foto desktop di default */
+.desktop-img {display: block;}
+.mobile-img {display: none;}
+
+/* Sotto i 600px mostra solo la foto mobile */
+@media (max-width: 600px) {
+  .desktop-img {display: none;}
+  .mobile-img {display: block;}
+}
+
+
