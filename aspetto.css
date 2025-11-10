@@ -52,7 +52,7 @@ header {
   padding: 0;
 }
 .hamburger-line {
-  display: block; width: 28px; height: 3px;
+  display: block; width: 22px; height: 2px;
   background: var(--light); border-radius: 2px;
   margin: 5px 0;
   transition: all 0.3s cubic-bezier(.63,.02,.13,1.11);
