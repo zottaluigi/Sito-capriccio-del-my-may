@@ -71,9 +71,15 @@ header {
   margin: 3px 0;
   transition: all 0.3s cubic-bezier(.63,.02,.13,1.11);
 }
-.menu-toggle.active .hamburger-line:nth-child(1) {transform: rotate(45deg) translate(3.5px, 3.5px) !important;}
-.menu-toggle.active .hamburger-line:nth-child(2) {opacity: 0;}
-.menu-toggle.active .hamburger-line:nth-child(3) {transform: rotate(-45deg) translate(3.5px, -3.5px) !important;}
+.menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(3.5px, 3.5px) !important;
+}
+.menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(3.5px, -3.5px) !important;
+}
 
 /* ----- MENU DESKTOP ----- */
 .nav-links {
