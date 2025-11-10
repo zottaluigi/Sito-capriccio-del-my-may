@@ -93,7 +93,6 @@ header {
   font-size: 1em;
 }
 .nav-links li a:hover {background: var(--primary);}
-.menu-toggle {display: none;} /* compare da mobile */
 
 /* ==== MOBILE NAV ==== */
 @media (max-width: 900px) {
